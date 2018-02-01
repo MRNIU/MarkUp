@@ -89,6 +89,7 @@ public:
     Md2HtmlFormat(){}
     virtual ~Md2HtmlFormat(){}
     string format(const string &srctext);
+    string format_e(const string &srctext);
 private:
     string text;
     string styleFile;
@@ -97,3 +98,4 @@ private:
 };
 
 #endif /* header_h */
+
