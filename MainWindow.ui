@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>553</width>
-    <height>398</height>
+    <width>757</width>
+    <height>457</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -50,7 +50,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>553</width>
+     <width>757</width>
      <height>22</height>
     </rect>
    </property>
@@ -62,10 +62,123 @@
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
+   <addaction name="action_new_file"/>
+   <addaction name="action_save_file"/>
+   <addaction name="separator"/>
+   <addaction name="action_bold"/>
+   <addaction name="action_Italic"/>
+   <addaction name="action_underline"/>
+   <addaction name="separator"/>
+   <addaction name="action_H1"/>
+   <addaction name="action_H2"/>
+   <addaction name="action_H3"/>
+   <addaction name="separator"/>
+   <addaction name="action_unordered_list"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
+  <action name="action_new_file">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="QRC.qrc">
+     <normaloff>:/ui/ui/Add_File.png</normaloff>:/ui/ui/Add_File.png</iconset>
+   </property>
+   <property name="text">
+    <string> new file</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="action_save_file">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="QRC.qrc">
+     <normaloff>:/ui/ui/Save.png</normaloff>:/ui/ui/Save.png</iconset>
+   </property>
+   <property name="text">
+    <string> save file</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="action_bold">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="QRC.qrc">
+     <normaloff>:/ui/ui/Bold.png</normaloff>:/ui/ui/Bold.png</iconset>
+   </property>
+   <property name="text">
+    <string> bold</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+B</string>
+   </property>
+  </action>
+  <action name="action_Italic">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="QRC.qrc">
+     <normaloff>:/ui/ui/Italic.png</normaloff>:/ui/ui/Italic.png</iconset>
+   </property>
+   <property name="text">
+    <string> Italic</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+I</string>
+   </property>
+  </action>
+  <action name="action_underline">
+   <property name="icon">
+    <iconset resource="QRC.qrc">
+     <normaloff>:/ui/ui/Underline.png</normaloff>:/ui/ui/Underline.png</iconset>
+   </property>
+   <property name="text">
+    <string> underline</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+U</string>
+   </property>
+  </action>
+  <action name="action_H1">
+   <property name="text">
+    <string> H1</string>
+   </property>
+  </action>
+  <action name="action_H2">
+   <property name="text">
+    <string> H2</string>
+   </property>
+  </action>
+  <action name="action_H3">
+   <property name="text">
+    <string> H3</string>
+   </property>
+  </action>
+  <action name="action_unordered_list">
+   <property name="icon">
+    <iconset resource="QRC.qrc">
+     <normaloff>:/ui/ui/Bulleted_List.png</normaloff>:/ui/ui/Bulleted_List.png</iconset>
+   </property>
+   <property name="text">
+    <string> unordered list</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+U</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="QRC.qrc"/>
+ </resources>
  <connections/>
 </ui>

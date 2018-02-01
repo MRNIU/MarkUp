@@ -3,4 +3,36 @@
         <file>test.html</file>
         <file>test.md</file>
     </qresource>
+    <qresource prefix="/ui">
+        <file>ui/Share.png</file>
+        <file>ui/Sigma.png</file>
+        <file>ui/Undo.png</file>
+        <file>ui/Redo.png</file>
+        <file>ui/Clock.png</file>
+        <file>ui/Flow_Chart.png</file>
+        <file>ui/Table.png</file>
+        <file>ui/Male_User.png</file>
+        <file>ui/Help.png</file>
+        <file>ui/Underline.png</file>
+        <file>ui/Italic.png</file>
+        <file>ui/Bold.png</file>
+        <file>ui/Code.png</file>
+        <file>ui/Link.png</file>
+        <file>ui/Picture.png</file>
+        <file>ui/Microsoft_Word.png</file>
+        <file>ui/Text_Width.png</file>
+        <file>ui/Text_Height.png</file>
+        <file>ui/Text_Color.png</file>
+        <file>ui/Typography.png</file>
+        <file>ui/PDF.png</file>
+        <file>ui/Add_File.png</file>
+        <file>ui/Bulleted_List.png</file>
+        <file>ui/Menu.png</file>
+        <file>ui/Settings.png</file>
+        <file>ui/Search.png</file>
+        <file>ui/Refresh.png</file>
+        <file>ui/Info.png</file>
+        <file>ui/Document.png</file>
+        <file>ui/Save.png</file>
+    </qresource>
 </RCC>
