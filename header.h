@@ -1,3 +1,4 @@
+
 #ifndef header_h
 #define header_h
 
@@ -9,28 +10,15 @@
 using namespace std;
 using namespace boost;
 
-// main.cpp
-void read_markdown();
-
-// parser.cpp
-
-//std::string header_result(std::string str);
-
-class Header{
-public:
-    long shut;
-    string str;
-    
-    smatch getstr(string str);
-    long getlenth(string str);
-};
-
 namespace FPT{
     // end must not include enter ｛$|$(?!\\n)｝是测试器所有行的结尾，这里用$就行了
     const char* const FIRST_TITLE = "^#([^#]+?)$";  // 标题1 ok
     const char* const SECOND_TITLE = "^##([^#]+?)$";    // 标题2 ok
     const char* const THIRD_TITLE = "^###([^#]+?)$";    // 标题3 ok
     const char* const FORTH_TITLE = "^####([^#]+?)$";   // 标题4 ok
+    const char* const FIFTH_TITLE = "^#####([^#]+?)$";   // 标题5 ok
+    const char* const SIXTH_TITLE = "^######([^#]+?)$";   // 标题6 ok
+    
     const char* const HR = "(-{3,})";   // 分割线 ok
     const char* const BOLD = "\\*\\*([^\\*]+?)\\*\\*";  // 加粗 ok
     const char* const ITALIC = "(?<!\\*)\\*([^\\*]+?)\\*";  // 斜体 ok
@@ -50,6 +38,8 @@ namespace FT{
     const char* const SECOND_TITLE = "<H2>\\1</H2>";
     const char* const THIRD_TITLE =  "<H3>\\1</H3>";
     const char* const FORTH_TITLE =  "<H4>\\1</H4>";
+    const char* const FIFTH_TITLE =  "<H5>\\1</H5>";
+    const char* const SIXTH_TITLE =  "<H6>\\1</H6>";
     const char* const HR = "<HR>";
     const char* const BOLD = "<STRONG>\\1</STRONG>";
     const char* const ITALIC = "<EM>\\1</EM>";
@@ -62,20 +52,6 @@ namespace FT{
     const char* const LIST_BLOCK = "<UL>\\1</UL>";
 }
 
-namespace CR {
-    const char* const RED="color:red";
-    const char* const YELLOW="color:yellow";
-    const char* const BLUE="color:blue";
-    const char* const GREEN="color:green";
-    const char* const BLACK="color:black";
-    const char* const WHITE="color:white";
-    const char* const GRAY="color:gray";
-    const char* const ORANGE="color:orange";
-    const char* const PURPLE="color:purple";
-    const char* const BROWN="color:brown";
-    const char* const GOLD="color:gold";
-}
-
 class Md2HtmlFormat
 {
 public:
@@ -86,6 +62,8 @@ private:
     string text;
     string styleFile;
     void addRules(string &text,const char *pattern, const char *foramt);
+    void addRulesEdit(string &text,const char *pattern, const char *foramt);
 };
 
 #endif /* header_h */
+
