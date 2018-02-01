@@ -1,3 +1,10 @@
+//
+//  header.h
+//  MarkDown
+//
+//  Created by 牛志宏 on 2018/1/27.
+//  Copyright © 2018年 牛志宏. All rights reserved.
+//
 
 #ifndef header_h
 #define header_h
@@ -18,7 +25,6 @@ namespace FPT{
     const char* const FORTH_TITLE = "^####([^#]+?)$";   // 标题4 ok
     const char* const FIFTH_TITLE = "^#####([^#]+?)$";   // 标题5 ok
     const char* const SIXTH_TITLE = "^######([^#]+?)$";   // 标题6 ok
-    
     const char* const HR = "(-{3,})";   // 分割线 ok
     const char* const BOLD = "\\*\\*([^\\*]+?)\\*\\*";  // 加粗 ok
     const char* const ITALIC = "(?<!\\*)\\*([^\\*]+?)\\*";  // 斜体 ok
@@ -31,6 +37,8 @@ namespace FPT{
     const char* const PARA = "(?<=\\n)(^[^\\n#].+?)(?=\\n\\n|\\n#)";    // 段落 ok
     const char* const LIST_ITEM = "^-([^-]*?)(?=\\n)";  // 有序列表 ok
     const char* const LIST_BLOCK = "(<LI>.*?)(?=\\n)";   // 无序列表 ?
+    const char* const UNDER_LINE = "_([^_]+)_";  // 下划线
+    const char* const DEL_LINE = "-([^-]+)-";    // 删除线
 }
 
 namespace FT{
@@ -50,6 +58,29 @@ namespace FT{
     const char* const PARA = "<P>\\1</P>";
     const char* const LIST_ITEM = "<LI>\\1</LI>";
     const char* const LIST_BLOCK = "<UL>\\1</UL>";
+    const char* const UNDER_LINE = "<U>\\1</U>";
+    const char* const DEL_LINE = "<DEL>\\1</DEL>";
+}
+
+namespace EFT{
+    const char* const FIRST_TITLE =  "<H1>$&</H1>";
+    const char* const SECOND_TITLE = "<H2>$&</H2>";
+    const char* const THIRD_TITLE =  "<H3>$&</H3>";
+    const char* const FORTH_TITLE =  "<H4>$&</H4>";
+    const char* const FIFTH_TITLE =  "<H5>$&</H5>";
+    const char* const SIXTH_TITLE =  "<H6>$&</H6>";
+    const char* const HR = "<HR>";
+    const char* const BOLD = "<STRONG>$&</STRONG>";
+    const char* const ITALIC = "<EM>$&</EM>";
+    const char* const STRING = "<CODE>$&</CODE>";
+    const char* const LINK = "<A href=\"$&\">$&</A>";
+    const char* const QUOTE = "<BLOCKQUOTE><P>$&</P></BLOCKQUOTE>";
+    const char* const CODE = "<PRE><CODE>$&</CODE></PRE>";
+    const char* const PARA = "<P>$&</P>";
+    const char* const LIST_ITEM = "<LI>$&</LI>";
+    const char* const LIST_BLOCK = "<UL>$&</UL>";
+    const char* const UNDER_LINE = "<U>$&</U>";
+    const char* const DEL_LINE = "<DEL>$&</DEL>";
 }
 
 class Md2HtmlFormat
@@ -66,4 +97,3 @@ private:
 };
 
 #endif /* header_h */
-
