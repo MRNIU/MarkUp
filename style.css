@@ -1,0 +1,24 @@
+H1,H2,H3,H4,H5,H6 {
+  color:rgb(87, 195, 188);
+}
+
+EM {
+  color:rgb(230, 147, 56);
+}
+
+STRONG {
+  color:rgb(238, 111, 55);
+}
+
+A {
+  color:rgb(171, 196, 135);
+}
+
+PRE CODE {
+  color:rgb(1, 196, 135);
+  background-color: gray;
+  border-radius: 4px;
+  padding: 2px 4px;
+
+
+}
